@@ -32,11 +32,12 @@
             app:layout_constraintHorizontal_bias="0.9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/progress_horizontal"
+            app:srcCompat="@drawable/ic_ajustes"
             tools:visibility="visible" />
 
         <ImageButton
             android:id="@+id/imageButtonHome"
+            style="@style/Widget.AppCompat.ImageButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="#00000000"
@@ -47,7 +48,7 @@
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/btn_dialog"
+            app:srcCompat="@drawable/ic_home"
             tools:visibility="visible" />
 
         <ImageButton
@@ -62,7 +63,7 @@
             app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/dialog_holo_dark_frame"
+            app:srcCompat="@drawable/ic_eventos"
             tools:visibility="visible" />
 
         <ImageButton
@@ -77,7 +78,7 @@
             app:layout_constraintHorizontal_bias="0.38"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/editbox_dropdown_dark_frame"
+            app:srcCompat="@drawable/ic_noticias"
             tools:visibility="visible" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
