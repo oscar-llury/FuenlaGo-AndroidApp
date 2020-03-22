@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FuenlaGo</string>
+
+    <string name="button_home"></string>
+    <string name="button_noticias"></string>
+    <string name="button_eventos"></string>
+    <string name="button_ajustes"></string>
+    <string name="button_ayuda"></string>
+
 </resources>

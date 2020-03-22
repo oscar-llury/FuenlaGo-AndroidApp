@@ -7,6 +7,19 @@
     android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageHome"
+        android:layout_width="1006dp"
+        android:layout_height="681dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@android:string/ok"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/layoutNavegacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fuenlabrada" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutNavegacion"
         android:layout_width="0dp"
@@ -22,9 +35,10 @@
 
         <ImageButton
             android:id="@+id/imageButtonAjustes"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="#00000000"
+            android:contentDescription="@string/button_ajustes"
             android:scaleType="centerInside"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -38,9 +52,10 @@
         <ImageButton
             android:id="@+id/imageButtonHome"
             style="@style/Widget.AppCompat.ImageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="#00000000"
+            android:contentDescription="@string/button_home"
             android:scaleType="centerInside"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -53,10 +68,12 @@
 
         <ImageButton
             android:id="@+id/imageButtonEventos"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="#00000000"
-            android:scaleType="centerInside"
+            android:contentDescription="@string/button_eventos"
+            android:scaleType="centerCrop"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -68,10 +85,11 @@
 
         <ImageButton
             android:id="@+id/imageButtonNoticias"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="#00000000"
-            android:scaleType="centerInside"
+            android:contentDescription="@string/button_noticias"
+            android:scaleType="centerCrop"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -82,13 +100,23 @@
             tools:visibility="visible" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello FuenlaGo!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/imageButtonAyuda"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/button_ayuda"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074"
+        app:srcCompat="@mipmap/ic_tutorial"
+        tools:srcCompat="@mipmap/ic_tutorial"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
