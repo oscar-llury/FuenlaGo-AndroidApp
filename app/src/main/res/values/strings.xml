@@ -7,4 +7,9 @@
     <string name="button_ajustes"></string>
     <string name="button_ayuda"></string>
 
+    <string name="tutorialnoticias1">Puedes ver una noticia</string>
+    <string name="tutorialnoticias2">Puedes darle a me gusta o no me gusta</string>
+    <string name="tutorialnoticias3">Contactar con el ayuntamiento</string>
+
+
 </resources>

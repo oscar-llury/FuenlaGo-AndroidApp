@@ -10,25 +10,71 @@ import android.widget.ImageButton;
 
 public class Profile extends AppCompatActivity {
 
-    private Button ButtonAjustes;
+    private Button ButtonMasAjustes;
+
+    private ImageButton ButtonAjustes;
+    private ImageButton ButtonHome;
+    private ImageButton ButtonEventos;
+    private ImageButton ButtonNoticias;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        ButtonAjustes = findViewById(R.id.Ajustes);
-        ButtonAjustes.setOnClickListener(new View.OnClickListener() {
+        ButtonMasAjustes = findViewById(R.id.Ajustes);
+        ButtonMasAjustes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSettingsActivity();
             }
         });
 
+        ButtonNoticias = findViewById(R.id.imageButtonNoticias);
+        ButtonNoticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNoticiasActivity();
+            }
+        });
+        ButtonAjustes = findViewById(R.id.imageButtonAjustes);
+        ButtonAjustes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSettingsActivity();
+            }
+        });
+        ButtonHome = findViewById(R.id.imageButtonHome);
+        ButtonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomeActivity();
+            }
+        });
+        ButtonEventos = findViewById(R.id.imageButtonEventos);
+        ButtonEventos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEventsActivity();
+            }
+        });
+
     }
 
-    public void openSettingsActivity(){
+    private void openNoticiasActivity() {
+        Intent intent = new Intent(this, Noticias.class);
+        startActivity(intent);
+    }
+    private void openSettingsActivity(){
         Intent intent = new Intent(this,Settings.class);
         startActivity(intent);
+    }
+    private void openHomeActivity(){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    private void openEventsActivity(){
+        //Intent intent = new Intent(this,MainActivity.class);
+        //startActivity(intent);
     }
 }

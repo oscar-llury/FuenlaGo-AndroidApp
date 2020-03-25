@@ -7,6 +7,35 @@
     android:background="#FFFFFF"
     tools:context=".Settings">
 
+    <LinearLayout
+        android:id="@+id/lineaNavegacion"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/layoutNavegacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageHome"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#7E3E3E"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/layoutNavegacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutNavegacion"
         android:layout_width="0dp"
@@ -22,9 +51,10 @@
 
         <ImageButton
             android:id="@+id/imageButtonAjustes"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="#00000000"
+            android:contentDescription="@string/button_ajustes"
             android:scaleType="centerInside"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -32,15 +62,16 @@
             app:layout_constraintHorizontal_bias="0.9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_ajustes"
+            app:srcCompat="@mipmap/ic_ajustes1_claro"
             tools:visibility="visible" />
 
         <ImageButton
             android:id="@+id/imageButtonHome"
             style="@style/Widget.AppCompat.ImageButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="#00000000"
+            android:contentDescription="@string/button_home"
             android:scaleType="centerInside"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -48,37 +79,40 @@
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_home"
+            app:srcCompat="@mipmap/ic_home_claro"
             tools:visibility="visible" />
 
         <ImageButton
             android:id="@+id/imageButtonEventos"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            style="@style/Widget.AppCompat.ImageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="#00000000"
-            android:scaleType="centerInside"
+            android:contentDescription="@string/button_eventos"
+            android:scaleType="centerCrop"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_eventos"
+            app:srcCompat="@mipmap/ic_eventos_claro"
             tools:visibility="visible" />
 
         <ImageButton
             android:id="@+id/imageButtonNoticias"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="#00000000"
-            android:scaleType="centerInside"
+            android:contentDescription="@string/button_noticias"
+            android:scaleType="centerCrop"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.38"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_noticias"
+            app:srcCompat="@mipmap/ic_noticias_claro"
             tools:visibility="visible" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -86,32 +120,35 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="339dp"
         android:layout_height="548dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="8dp"
         android:background="#00FF0000"
-        app:layout_constraintBottom_toTopOf="@+id/layoutNavegacion"
+        app:layout_constraintBottom_toTopOf="@+id/lineaNavegacion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout6"
+            android:id="@+id/constraintLayoutLetra"
             android:layout_width="0dp"
-            android:layout_height="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
             android:background="#000039FF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout7"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutDaltonico"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayoutDaltonico"
             app:layout_constraintVertical_bias="1.0">
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="166dp"
-                android:layout_height="57dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
-                android:text="                Tamaño Letra"
+                android:text="Tamaño Letra"
                 android:textColor="#000000"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -119,22 +156,22 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.296"
-                tools:text="                Tamaño Letra" />
+                app:layout_constraintVertical_bias="0.493"
+                tools:text="Tamaño Letra" />
 
             <RadioGroup
                 android:id="@+id/radioGroup2"
-                android:layout_width="136dp"
-                android:layout_height="113dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <RadioButton
                     android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#FFFFFF"
+                    android:background="#00FFFFFF"
                     android:cursorVisible="false"
                     android:shadowColor="#000000"
                     android:text="Pequeña"
@@ -143,29 +180,30 @@
 
                 <RadioButton
                     android:id="@+id/radioButton3"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:theme="@style/MyRadioButton"
                     android:checked="true"
                     android:text="Mediana"
                     android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:theme="@style/MyRadioButton" />
 
                 <RadioButton
                     android:id="@+id/radioButton4"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="45dp"
-                    android:theme="@style/MyRadioButton"
                     android:text="Grande"
                     android:textColor="#000000"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:theme="@style/MyRadioButton" />
             </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout7"
+            android:id="@+id/constraintLayoutDaltonico"
             android:layout_width="0dp"
-            android:layout_height="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
             android:background="#00F0F4F4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -176,200 +214,234 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="167dp"
-                android:layout_height="61dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
                 android:text="Modo Daltónico"
                 android:textColor="#050505"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.098"
+                app:layout_constraintEnd_toStartOf="@+id/switch1"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.417"
+                app:layout_constraintVertical_bias="0.55"
                 tools:text="Modo Daltónico" />
 
             <Switch
                 android:id="@+id/switch1"
-                android:layout_width="116dp"
-                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
                 android:theme="@style/MySwitchButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.589"
-                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
+            android:id="@+id/constraintLayoutOscuro"
             android:layout_width="0dp"
-            android:layout_height="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:background="#00FF00DD"
-            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout6"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutVolumen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.254">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutDaltonico"
+            app:layout_constraintVertical_bias="0.61">
 
             <Switch
                 android:id="@+id/switch2"
-                android:layout_width="115dp"
-                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
                 android:theme="@style/MySwitchButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.534"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/textView3"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.547" />
+                app:layout_constraintVertical_bias="0.6" />
 
             <TextView
-                android:id="@+id/textView3"
-                android:layout_width="166dp"
-                android:layout_height="57dp"
-                android:text="                                            Modo Oscuro"
+                android:id="@+id/texthelp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Modo Oscuro"
                 android:textColor="#020202"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.084"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.296"
-                tools:text="                                            Modo Oscuro" />
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="Modo Oscuro" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout5"
+            android:id="@+id/constraintLayoutVolumen"
             android:layout_width="0dp"
-            android:layout_height="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
             android:background="#002EFF00"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutIdioma"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout7"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutDaltonico"
+            app:layout_constraintVertical_bias="0.76">
 
             <TextView
-                android:id="@+id/textView4"
-                android:layout_width="166dp"
-                android:layout_height="57dp"
-                android:text="             Volumen"
+                android:id="@+id/texthelp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Volumen"
                 android:textColor="#020202"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.084"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.296"
-                tools:text="             Volumen" />
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Volumen" />
 
             <SeekBar
                 android:id="@+id/seekBar"
                 style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="120dp"
                 android:layout_height="32dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
                 android:background="#00000000"
                 android:max="10"
                 android:progress="3"
                 android:theme="@style/MyRadioButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.39"
-                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/texthelp1"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.547" />
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
+            android:id="@+id/constraintLayoutIdioma"
             android:layout_width="0dp"
-            android:layout_height="111dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
             android:background="#00FFE600"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout6"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutLetra"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayoutDaltonico"
+            app:layout_constraintVertical_bias="0.95">
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="166dp"
-                android:layout_height="57dp"
-                android:layout_marginEnd="50dp"
-                android:layout_marginRight="50dp"
-                android:text="                Idioma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Idioma"
                 android:textColor="#000000"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.296"
-                tools:text="                Idioma" />
+                app:layout_constraintVertical_bias="1.0"
+                tools:text="Idioma" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
-                android:layout_width="71dp"
-                android:layout_height="28dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
                 android:background="#00FFFFFF"
                 android:scaleType="centerInside"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.549"
+                app:layout_constraintHorizontal_bias="0.751"
                 app:layout_constraintStart_toEndOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.493"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@mipmap/ic_idioma" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="51dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginLeft="14dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
+        android:id="@+id/buttonAyuda"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#00FFFFFF"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Perfil"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039"
-        app:srcCompat="@android:drawable/ic_menu_help" />
+        app:layout_constraintVertical_bias="0.001"
+        app:srcCompat="@mipmap/ic_tutorial" />
 
     <Button
         android:id="@+id/Perfil"
-        android:layout_width="138dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
         android:text="Perfil"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonAyuda"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/Ajustes"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.561" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/Ajustes"
-        android:layout_width="138dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
         android:background="#FF0000"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="15dp"
         android:text="Ajustes"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.508" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

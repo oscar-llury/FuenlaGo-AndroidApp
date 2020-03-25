@@ -2,6 +2,7 @@ package com.example.fuenlago;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,12 @@ public class Noticias extends AppCompatActivity {
     private ConstraintLayout help1;
     private ConstraintLayout help2;
     private ConstraintLayout help3;
+
+    private ImageButton ButtonAjustes;
+    private ImageButton ButtonHome;
+    private ImageButton ButtonEventos;
+    private ImageButton ButtonNoticias;
+
 
     private Button new1;
     private Button new2;
@@ -88,6 +95,38 @@ public class Noticias extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_noticias);
+
+
+        ButtonNoticias = findViewById(R.id.imageButtonNoticias);
+        ButtonNoticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openNoticiasActivity();
+            }
+        });
+        ButtonAjustes = findViewById(R.id.imageButtonAjustes);
+        ButtonAjustes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSettingsActivity();
+            }
+        });
+        ButtonHome = findViewById(R.id.imageButtonHome);
+        ButtonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomeActivity();
+            }
+        });
+        ButtonEventos = findViewById(R.id.imageButtonEventos);
+        ButtonEventos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEventsActivity();
+            }
+        });
+
+
 
         //PONER LOS NUMEROS RANDOS A LOS CORAZONES
         numcora1 = (TextView) findViewById(R.id.numcora1);
@@ -409,9 +448,9 @@ public class Noticias extends AppCompatActivity {
         ayudaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                help1 = findViewById(R.id.help1);
-                help2 = findViewById(R.id.help2);
-                help3 = findViewById(R.id.help3);
+                help1 = findViewById(R.id.help3);
+                help2 = findViewById(R.id.help1);
+                help3 = findViewById(R.id.help2);
 
                 if (ayuda) {
                     ayuda = false;
@@ -446,5 +485,22 @@ public class Noticias extends AppCompatActivity {
         textView.setText(Integer.toString(r.nextInt(75)));
     }
 
+    private void openNoticiasActivity() {
+        Intent intent = new Intent(this, Noticias.class);
+        startActivity(intent);
+    }
+
+    private void openSettingsActivity(){
+        Intent intent = new Intent(this,Settings.class);
+        startActivity(intent);
+    }
+    private void openHomeActivity(){
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    private void openEventsActivity(){
+        //Intent intent = new Intent(this,MainActivity.class);
+        //startActivity(intent);
+    }
 
 }
