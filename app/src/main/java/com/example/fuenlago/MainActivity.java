@@ -3,6 +3,7 @@ package com.example.fuenlago;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton ButtonHome;
     private ImageButton ButtonEventos;
     private ImageButton ButtonNoticias;
+
+    private Button inicio;
+    private Button register;
 
     private boolean ayuda = false;
     private ImageButton ayudaButton;
@@ -56,6 +60,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        inicio = findViewById(R.id.login);
+        inicio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openErrorActivity();
+            }
+        });
+        register = findViewById(R.id.signup);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openErrorActivity();
+            }
+        });
 
         ayudaButton = findViewById(R.id.ayudaButton);
         ayudaButton.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +118,11 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(intent);
     }
     private void openEventsActivity(){
+        Intent intent = new Intent(this,Error.class);
+        startActivity(intent);
+    }
+
+    private void openErrorActivity(){
         Intent intent = new Intent(this,Error.class);
         startActivity(intent);
     }
