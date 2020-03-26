@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ButtonNoticias = findViewById(R.id.imageButtonNoticias);
-            ButtonNoticias.setOnClickListener(new View.OnClickListener() {
+        ButtonNoticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openNoticiasActivity();

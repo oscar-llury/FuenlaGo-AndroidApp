@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -40,10 +41,13 @@ public class Settings extends AppCompatActivity {
     private RadioButton grande;
     private SeekBar volumen;
 
+    private Vibrator vibe;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        vibe = (Vibrator) Settings.this.getSystemService(Settings.VIBRATOR_SERVICE);
 
         restablecer= findViewById(R.id.restablecer);
         daltonico= findViewById(R.id.switchDaltonico);
@@ -164,6 +168,42 @@ public class Settings extends AppCompatActivity {
                 volumen.setProgress(3);
             }
         });
+
+        daltonico.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vibe.vibrate(40);
+            }
+        });
+
+        oscuro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vibe.vibrate(40);
+            }
+        });
+
+        pequeño.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vibe.vibrate(40);
+            }
+        });
+
+        mediano.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vibe.vibrate(40);
+            }
+        });
+
+        grande.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vibe.vibrate(40);
+            }
+        });
+
     }
 
     public void openProfileActivity(){
