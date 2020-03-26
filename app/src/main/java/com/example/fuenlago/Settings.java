@@ -2,7 +2,7 @@ package com.example.fuenlago;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import com.example.fuenlago.ayuda;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -98,11 +98,11 @@ public class Settings extends AppCompatActivity {
         });
 
         ayudaButton = findViewById(R.id.ayudaButton);
-        if(!com.example.fuenlago.ayuda.isShowAyuda()){
+        if(!Ayuda.isShowAyuda()){
             ayudaButton.setVisibility(View.GONE);
         }
 
-        if (com.example.fuenlago.ayuda.isShowAyuda()){
+        if (Ayuda.isShowAyuda()){
             ocultarAyuda.setText("Ocultar ayuda");
         } else {
             ocultarAyuda.setText("Mostrar ayuda");
@@ -111,7 +111,7 @@ public class Settings extends AppCompatActivity {
         ocultarAyuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(com.example.fuenlago.ayuda.isShowAyuda()){
+                if(Ayuda.isShowAyuda()){
                     ocultarAyuda.setText("Mostrar ayuda");
                     ayudaButton.setVisibility(View.GONE);
                     ayudaCheck = false;
@@ -121,11 +121,11 @@ public class Settings extends AppCompatActivity {
                     help4.setVisibility(View.GONE);
                     help5.setVisibility(View.GONE);
                     help6.setVisibility(View.GONE);
-                    com.example.fuenlago.ayuda.setShowAyuda(false);
+                    Ayuda.setShowAyuda(false);
                 }else {
                     ocultarAyuda.setText("Ocultar ayuda");
                     ayudaButton.setVisibility(View.VISIBLE);
-                    com.example.fuenlago.ayuda.setShowAyuda(true);
+                    Ayuda.setShowAyuda(true);
                 }
             }
         });
