@@ -3,6 +3,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -114,12 +115,13 @@ public class Noticias extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_noticias);
-
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.thesound);
 
         ButtonNoticias = findViewById(R.id.imageButtonNoticias);
         ButtonNoticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openNoticiasActivity();
             }
         });
@@ -127,6 +129,7 @@ public class Noticias extends AppCompatActivity {
         ButtonAjustes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openSettingsActivity();
             }
         });
@@ -134,6 +137,7 @@ public class Noticias extends AppCompatActivity {
         ButtonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openHomeActivity();
             }
         });
@@ -141,6 +145,7 @@ public class Noticias extends AppCompatActivity {
         ButtonEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openEventsActivity();
             }
         });

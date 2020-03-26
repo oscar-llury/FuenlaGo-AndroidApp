@@ -3,6 +3,7 @@ package com.example.fuenlago;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,8 @@ public class Error extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_error);
 
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.thesound);
+
         close = findViewById(R.id.back);
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +37,7 @@ public class Error extends AppCompatActivity {
         ButtonNoticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openNoticiasActivity();
             }
         });
@@ -41,6 +45,7 @@ public class Error extends AppCompatActivity {
         ButtonAjustes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openSettingsActivity();
             }
         });
@@ -48,6 +53,7 @@ public class Error extends AppCompatActivity {
         ButtonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openHomeActivity();
             }
         });
@@ -55,6 +61,7 @@ public class Error extends AppCompatActivity {
         ButtonEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openEventsActivity();
             }
         });

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +31,8 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.thesound);
+
         ButtonMasAjustes = findViewById(R.id.Ajustes);
         ButtonMasAjustes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +45,7 @@ public class Profile extends AppCompatActivity {
         ButtonNoticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openNoticiasActivity();
             }
         });
@@ -49,6 +53,7 @@ public class Profile extends AppCompatActivity {
         ButtonAjustes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openSettingsActivity();
             }
         });
@@ -56,6 +61,7 @@ public class Profile extends AppCompatActivity {
         ButtonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openHomeActivity();
             }
         });
@@ -63,6 +69,7 @@ public class Profile extends AppCompatActivity {
         ButtonEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openEventsActivity();
             }
         });

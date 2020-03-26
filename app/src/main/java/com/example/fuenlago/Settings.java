@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
@@ -49,6 +50,8 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         vibe = (Vibrator) Settings.this.getSystemService(Settings.VIBRATOR_SERVICE);
 
+        final MediaPlayer mp = MediaPlayer.create(this,  R.raw.thesound);
+
         restablecer= findViewById(R.id.restablecer);
         daltonico= findViewById(R.id.switchDaltonico);
         oscuro= findViewById(R.id.switchOscuro);
@@ -76,6 +79,7 @@ public class Settings extends AppCompatActivity {
         ButtonNoticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openNoticiasActivity();
             }
         });
@@ -83,6 +87,7 @@ public class Settings extends AppCompatActivity {
         ButtonAjustes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openSettingsActivity();
             }
         });
@@ -90,6 +95,7 @@ public class Settings extends AppCompatActivity {
         ButtonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openHomeActivity();
             }
         });
@@ -97,7 +103,23 @@ public class Settings extends AppCompatActivity {
         ButtonEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openEventsActivity();
+            }
+        });
+
+        restablecer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                daltonico.setChecked(false);
+                oscuro.setChecked(false);
+                pequeño.setChecked(false);
+                mediano.setChecked(true);
+                grande.setChecked(false);
+                volumen.setProgress(3);
+                ocultarAyuda.setText("Ocultar ayuda");
+                ayudaButton.setVisibility(View.VISIBLE);
+                Ayuda.setShowAyuda(true);
             }
         });
 
@@ -157,17 +179,7 @@ public class Settings extends AppCompatActivity {
                 }
             }
         });
-        restablecer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                daltonico.setChecked(false);
-                oscuro.setChecked(false);
-                pequeño.setChecked(false);
-                mediano.setChecked(true);
-                grande.setChecked(false);
-                volumen.setProgress(3);
-            }
-        });
+
 
         volumen.setOnClickListener(new View.OnClickListener() {
             @Override

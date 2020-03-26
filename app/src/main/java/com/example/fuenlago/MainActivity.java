@@ -3,6 +3,7 @@ package com.example.fuenlago;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.media.MediaPlayer;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.content.Intent;
@@ -31,10 +32,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.thesound);
+
         ButtonNoticias = findViewById(R.id.imageButtonNoticias);
         ButtonNoticias.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openNoticiasActivity();
             }
         });
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         ButtonAjustes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openSettingsActivity();
             }
         });
@@ -49,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         ButtonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openHomeActivity();
             }
         });
@@ -56,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         ButtonEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 openEventsActivity();
             }
         });
