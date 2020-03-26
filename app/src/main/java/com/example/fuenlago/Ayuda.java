@@ -1,12 +1,8 @@
 package com.example.fuenlago;
 
-public class ayuda {
+public class Ayuda {
 
     private static  boolean showAyuda = true;
-
-    public ayuda() {
-        this.showAyuda = true;
-    }
 
     public static boolean isShowAyuda() {
         return showAyuda;
