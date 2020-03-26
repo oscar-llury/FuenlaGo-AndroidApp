@@ -448,9 +448,9 @@ public class Noticias extends AppCompatActivity {
         ayudaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                help1 = findViewById(R.id.help3);
-                help2 = findViewById(R.id.help1);
-                help3 = findViewById(R.id.help2);
+                help1 = findViewById(R.id.help1);
+                help2 = findViewById(R.id.help2);
+                help3 = findViewById(R.id.help3);
 
                 if (ayuda) {
                     ayuda = false;

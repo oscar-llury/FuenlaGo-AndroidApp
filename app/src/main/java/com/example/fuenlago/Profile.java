@@ -1,6 +1,7 @@
 package com.example.fuenlago;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +17,13 @@ public class Profile extends AppCompatActivity {
     private ImageButton ButtonHome;
     private ImageButton ButtonEventos;
     private ImageButton ButtonNoticias;
+
+    private boolean ayuda = false;
+    private ImageButton ayudaButton;
+    private ConstraintLayout help1;
+    private ConstraintLayout help2;
+    private ConstraintLayout help3;
+    private ConstraintLayout help4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +64,31 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openEventsActivity();
+            }
+        });
+
+        ayudaButton = findViewById(R.id.ayudaButton);
+        ayudaButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                help1 = findViewById(R.id.help1);
+                help2 = findViewById(R.id.help2);
+                help3 = findViewById(R.id.help3);
+                help4 = findViewById(R.id.help4);
+
+                if (ayuda) {
+                    ayuda = false;
+                    help1.setVisibility(View.GONE);
+                    help2.setVisibility(View.GONE);
+                    help3.setVisibility(View.GONE);
+                    help4.setVisibility(View.GONE);
+                } else {
+                    ayuda = true;
+                    help1.setVisibility(View.VISIBLE);
+                    help2.setVisibility(View.VISIBLE);
+                    help3.setVisibility(View.VISIBLE);
+                    help4.setVisibility(View.VISIBLE);
+                }
             }
         });
 

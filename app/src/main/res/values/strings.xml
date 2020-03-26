@@ -11,5 +11,20 @@
     <string name="tutorialnoticias2">Puedes darle a me gusta o no me gusta</string>
     <string name="tutorialnoticias3">Contactar con el ayuntamiento</string>
 
+    <string name="tutorialperfil1">Ver ajustes</string>
+    <string name="tutorialperfil2">Tu usuario</string>
+    <string name="tutorialperfil3">Tu correo</string>
+    <string name="tutorialperfil4">Tu contraseña</string>
+
+    <string name="tutorialajustes1">Ver perfil</string>
+    <string name="tutorialajustes2">Activar modo para daltónicos</string>
+    <string name="tutorialajustes3">Activar modo oscuro</string>
+    <string name="tutorialajustes4">Subir o bajar el volumen</string>
+    <string name="tutorialajustes5">Idioma actual</string>
+    <string name="tutorialajustes6">Elegir tamaño</string>
+
+    <string name="tutorialPP1">Buscar noticia o evento</string>
+    <string name="tutorialPP2">Botón de ayuda</string>
+    <string name="tutorialPP3">Barra de navegación \n (Página Principal, Noticias, Eventos, Ajustes y Perfil)</string>
 
 </resources>
