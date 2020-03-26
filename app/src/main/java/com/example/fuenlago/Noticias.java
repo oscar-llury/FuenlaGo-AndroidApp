@@ -240,7 +240,7 @@ public class Noticias extends AppCompatActivity {
         incora1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decreaseNum(numincora1);
+                increaseNum(numincora1);
             }
         });
 
@@ -248,7 +248,7 @@ public class Noticias extends AppCompatActivity {
         incora2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decreaseNum(numincora2);
+                increaseNum(numincora2);
             }
         });
 
@@ -256,7 +256,7 @@ public class Noticias extends AppCompatActivity {
         incora3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decreaseNum(numincora3);
+                increaseNum(numincora3);
             }
         });
 
@@ -264,7 +264,7 @@ public class Noticias extends AppCompatActivity {
         incora4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decreaseNum(numincora4);
+                increaseNum(numincora4);
             }
         });
 
@@ -272,7 +272,7 @@ public class Noticias extends AppCompatActivity {
         incora5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decreaseNum(numincora5);
+                increaseNum(numincora5);
             }
         });
 
@@ -280,7 +280,7 @@ public class Noticias extends AppCompatActivity {
         incora6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decreaseNum(numincora6);
+                increaseNum(numincora6);
             }
         });
 
@@ -288,7 +288,7 @@ public class Noticias extends AppCompatActivity {
         incora7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decreaseNum(numincora7);
+                increaseNum(numincora7);
             }
         });
 
@@ -296,7 +296,7 @@ public class Noticias extends AppCompatActivity {
         incora8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                decreaseNum(numincora8);
+                increaseNum(numincora8);
             }
         });
 
@@ -469,10 +469,6 @@ public class Noticias extends AppCompatActivity {
 
     private void increaseNum (TextView textView) {
         textView.setText(Integer.toString(Integer.parseInt(textView.getText().toString())+1));
-    }
-
-    private void decreaseNum (TextView textView) {
-        textView.setText(Integer.toString(Integer.parseInt(textView.getText().toString())-1));
     }
 
     private void setNumCora (TextView textView) {
