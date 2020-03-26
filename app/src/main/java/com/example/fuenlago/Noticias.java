@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -106,6 +107,8 @@ public class Noticias extends AppCompatActivity {
     private boolean discheck6=true;
     private boolean discheck7=true;
     private boolean discheck8=true;
+
+    private ImageView formulario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -405,17 +408,7 @@ public class Noticias extends AppCompatActivity {
         new3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                theNew3 = findViewById(R.id.thenew3);
-                theNew3.setVisibility(View.VISIBLE);
-            }
-        });
-
-        closeNew3 = findViewById(R.id.closenew3);
-        closeNew3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                theNew3 = findViewById(R.id.thenew3);
-                theNew3.setVisibility(View.GONE);
+                openEventsActivity();
             }
         });
 
@@ -530,6 +523,14 @@ public class Noticias extends AppCompatActivity {
                 }
             }
         });
+
+        formulario = findViewById(R.id.buttonFormulario);
+        formulario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEventsActivity();
+            }
+        });
     }
 
     private void increaseNum (TextView textView) {
@@ -560,8 +561,8 @@ public class Noticias extends AppCompatActivity {
         startActivity(intent);
     }
     private void openEventsActivity(){
-        //Intent intent = new Intent(this,MainActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this,Error.class);
+        startActivity(intent);
     }
 
 }
