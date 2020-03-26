@@ -169,6 +169,12 @@ public class Settings extends AppCompatActivity {
             }
         });
 
+        volumen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                vibe.vibrate(40);
+            }
+        });
         daltonico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -216,8 +222,8 @@ public class Settings extends AppCompatActivity {
     }
 
     private void openSettingsActivity(){
-        Intent intent = new Intent(this,Settings.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this,Settings.class);
+        //startActivity(intent);
     }
     private void openHomeActivity(){
         Intent intent = new Intent(this,MainActivity.class);
