@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.SeekBar;
+import android.widget.Switch;
 
 public class Settings extends AppCompatActivity {
 
@@ -27,10 +30,27 @@ public class Settings extends AppCompatActivity {
     private ConstraintLayout help5;
     private ConstraintLayout help6;
 
+    private Button restablecer;
+    private Switch daltonico;
+    private Switch oscuro;
+
+    private RadioButton pequeño;
+    private RadioButton mediano;
+    private RadioButton grande;
+    private SeekBar volumen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        restablecer= findViewById(R.id.restablecer);
+        daltonico= findViewById(R.id.switchDaltonico);
+        oscuro= findViewById(R.id.switchOscuro);
+        pequeño= findViewById(R.id.radioButtonP);
+        mediano= findViewById(R.id.radioButtonM);
+        grande= findViewById(R.id.radioButtonG);
+        volumen= findViewById(R.id.volumen);
 
         ButtonProfile= findViewById(R.id.Perfil);
         ButtonProfile.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +119,17 @@ public class Settings extends AppCompatActivity {
                 }
             }
         });
-
+        restablecer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                daltonico.setChecked(false);
+                oscuro.setChecked(false);
+                pequeño.setChecked(false);
+                mediano.setChecked(true);
+                grande.setChecked(false);
+                volumen.setProgress(3);
+            }
+        });
     }
 
     public void openProfileActivity(){

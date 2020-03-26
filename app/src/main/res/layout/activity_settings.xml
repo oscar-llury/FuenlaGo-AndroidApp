@@ -164,6 +164,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <Button
+            android:id="@+id/restablecer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Restablecer"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/help5"
             android:layout_width="140dp"
@@ -448,7 +464,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
+                    android:id="@+id/radioButtonP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#00FFFFFF"
@@ -459,7 +475,7 @@
                     android:theme="@style/MyRadioButton" />
 
                 <RadioButton
-                    android:id="@+id/radioButton3"
+                    android:id="@+id/radioButtonM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
@@ -469,7 +485,7 @@
                     android:theme="@style/MyRadioButton" />
 
                 <RadioButton
-                    android:id="@+id/radioButton4"
+                    android:id="@+id/radioButtonG"
                     android:layout_width="wrap_content"
                     android:layout_height="45dp"
                     android:text="Grande"
@@ -483,13 +499,13 @@
             android:id="@+id/constraintLayoutDaltonico"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="8dp"
             android:background="#00F0F4F4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/restablecer"
             app:layout_constraintVertical_bias="0.0">
 
             <TextView
@@ -502,7 +518,7 @@
                 android:textColor="#050505"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/switch1"
+                app:layout_constraintEnd_toStartOf="@+id/switchDaltonico"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -510,17 +526,19 @@
                 tools:text="Modo Daltónico" />
 
             <Switch
-                android:id="@+id/switch1"
+                android:id="@+id/switchDaltonico"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
+                android:checked="false"
                 android:theme="@style/MySwitchButton"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -538,7 +556,7 @@
             app:layout_constraintVertical_bias="0.61">
 
             <Switch
-                android:id="@+id/switch2"
+                android:id="@+id/switchOscuro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
@@ -601,13 +619,14 @@
                 tools:text="Volumen" />
 
             <SeekBar
-                android:id="@+id/seekBar"
+                android:id="@+id/volumen"
                 style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="120dp"
                 android:layout_height="32dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
                 android:background="#00000000"
+                android:hapticFeedbackEnabled="false"
                 android:max="10"
                 android:progress="3"
                 android:theme="@style/MyRadioButton"

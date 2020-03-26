@@ -89,7 +89,23 @@ public class Noticias extends AppCompatActivity {
     private TextView numincora7;
     private TextView numincora8;
 
+    private boolean check1=true;
+    private boolean check2=true;
+    private boolean check3=true;
+    private boolean check4=true;
+    private boolean check5=true;
+    private boolean check6=true;
+    private boolean check7=true;
+    private boolean check8=true;
 
+    private boolean discheck1=true;
+    private boolean discheck2=true;
+    private boolean discheck3=true;
+    private boolean discheck4=true;
+    private boolean discheck5=true;
+    private boolean discheck6=true;
+    private boolean discheck7=true;
+    private boolean discheck8=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -175,15 +191,22 @@ public class Noticias extends AppCompatActivity {
         cora1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numcora1);
+                if(check1) {
+                    increaseNum(numcora1);
+                    check1 = false;
+                }
             }
+
         });
 
         cora2 = findViewById(R.id.cora2);
         cora2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numcora2);
+                if(check2) {
+                    increaseNum(numcora2);
+                    check2 = false;
+                }
             }
         });
 
@@ -191,7 +214,10 @@ public class Noticias extends AppCompatActivity {
         cora3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numcora3);
+                if(check3) {
+                    increaseNum(numcora3);
+                    check3 = false;
+                }
             }
         });
 
@@ -199,7 +225,10 @@ public class Noticias extends AppCompatActivity {
         cora4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numcora4);
+                if(check4) {
+                    increaseNum(numcora4);
+                    check4 = false;
+                }
             }
         });
 
@@ -207,7 +236,10 @@ public class Noticias extends AppCompatActivity {
         cora5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numcora5);
+                    if(check5) {
+                        increaseNum(numcora5);
+                        check5 = false;
+                    }
             }
         });
 
@@ -215,7 +247,10 @@ public class Noticias extends AppCompatActivity {
         cora6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numcora6);
+                    if(check6) {
+                        increaseNum(numcora6);
+                        check6 = false;
+                    }
             }
         });
 
@@ -223,7 +258,10 @@ public class Noticias extends AppCompatActivity {
         cora7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numcora7);
+                    if(check7) {
+                        increaseNum(numcora7);
+                        check7 = false;
+                    }
             }
         });
 
@@ -231,7 +269,10 @@ public class Noticias extends AppCompatActivity {
         cora8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numcora8);
+                    if(check8) {
+                        increaseNum(numcora8);
+                        check8 = false;
+                    }
             }
         });
 
@@ -240,7 +281,10 @@ public class Noticias extends AppCompatActivity {
         incora1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numincora1);
+                if(discheck1) {
+                    increaseNum(numincora1);
+                    discheck1 = false;
+                }
             }
         });
 
@@ -248,7 +292,10 @@ public class Noticias extends AppCompatActivity {
         incora2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numincora2);
+                if(discheck2) {
+                    increaseNum(numincora2);
+                    discheck2 = false;
+                }
             }
         });
 
@@ -256,7 +303,10 @@ public class Noticias extends AppCompatActivity {
         incora3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numincora3);
+                if(discheck3) {
+                    increaseNum(numincora3);
+                    discheck3 = false;
+                }
             }
         });
 
@@ -264,7 +314,10 @@ public class Noticias extends AppCompatActivity {
         incora4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numincora4);
+                if(discheck4) {
+                    increaseNum(numincora4);
+                    discheck4 = false;
+                }
             }
         });
 
@@ -272,7 +325,10 @@ public class Noticias extends AppCompatActivity {
         incora5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numincora5);
+                if(discheck5) {
+                    increaseNum(numincora5);
+                    discheck5 = false;
+                }
             }
         });
 
@@ -280,7 +336,10 @@ public class Noticias extends AppCompatActivity {
         incora6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numincora6);
+                if(discheck6) {
+                    increaseNum(numincora6);
+                    discheck6 = false;
+                }
             }
         });
 
@@ -288,7 +347,10 @@ public class Noticias extends AppCompatActivity {
         incora7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numincora7);
+                if(discheck7) {
+                    increaseNum(numincora7);
+                    discheck7 = false;
+                }
             }
         });
 
@@ -296,7 +358,10 @@ public class Noticias extends AppCompatActivity {
         incora8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                increaseNum(numincora8);
+                if(discheck8) {
+                    increaseNum(numincora8);
+                    discheck8 = false;
+                }
             }
         });
 
@@ -482,8 +547,8 @@ public class Noticias extends AppCompatActivity {
     }
 
     private void openNoticiasActivity() {
-        Intent intent = new Intent(this, Noticias.class);
-        startActivity(intent);
+        //Intent intent = new Intent(this, Noticias.class);
+        //startActivity(intent);
     }
 
     private void openSettingsActivity(){
