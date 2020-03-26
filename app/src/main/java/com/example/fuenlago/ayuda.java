@@ -2,17 +2,17 @@ package com.example.fuenlago;
 
 public class ayuda {
 
-    private boolean showAyuda;
+    private static  boolean showAyuda = true;
 
     public ayuda() {
         this.showAyuda = true;
     }
 
-    public boolean isShowAyuda() {
+    public static boolean isShowAyuda() {
         return showAyuda;
     }
 
-    public void setShowAyuda(boolean showAyuda) {
-        this.showAyuda = showAyuda;
+    public static void setShowAyuda(boolean prueba) {
+        showAyuda = prueba;
     }
 }

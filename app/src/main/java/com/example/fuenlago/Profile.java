@@ -68,6 +68,11 @@ public class Profile extends AppCompatActivity {
         });
 
         ayudaButton = findViewById(R.id.ayudaButton);
+
+        if(!com.example.fuenlago.ayuda.isShowAyuda()){
+            ayudaButton.setVisibility(View.GONE);
+        }
+
         ayudaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,7 +112,7 @@ public class Profile extends AppCompatActivity {
         startActivity(intent);
     }
     private void openEventsActivity(){
-        //Intent intent = new Intent(this,MainActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this,Error.class);
+        startActivity(intent);
     }
 }

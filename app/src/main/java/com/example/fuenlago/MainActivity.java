@@ -7,6 +7,7 @@ import android.widget.ImageButton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import com.example.fuenlago.ayuda;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -79,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        if(!com.example.fuenlago.ayuda.isShowAyuda()){
+            ayudaButton.setVisibility(View.GONE);
+        }
+
     }
 
 
@@ -96,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(intent);
     }
     private void openEventsActivity(){
-        //Intent intent = new Intent(this,MainActivity.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this,Error.class);
+        startActivity(intent);
     }
 }
