@@ -217,7 +217,6 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
-                        android:id="@+id/imagefecha1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -225,7 +224,6 @@
                         android:background="#000000"
                         android:visibility="visible"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/texthelp1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="?attr/homeAsUpIndicator" />
@@ -878,7 +876,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non nunc nisl. Nam rhoncus justo vel ex eleifend lobortis. Vivamus eget pharetra risus. Morbi consequat risus sit amet libero condimentum molestie. Etiam nisl dolor, feugiat ut condimentum nec, porttitor sed sem. Nam efficitur aliquam libero quis congue. Praesent est enim, viverra commodo mauris et, pulvinar congue neque. Aliquam erat volutpat. Sed porta ex sapien, ut auctor metus consectetur eget. Nullam commodo turpis at neque ultrices, quis rhoncus libero sodales. Praesent aliquet mi sagittis ante aliquet, et posuere lacus commodo. Quisque blandit imperdiet luctus. "
@@ -943,7 +940,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non nunc nisl. Nam rhoncus justo vel ex eleifend lobortis. Vivamus eget pharetra risus. Morbi consequat risus sit amet libero condimentum molestie. Etiam nisl dolor, feugiat ut condimentum nec, porttitor sed sem. Nam efficitur aliquam libero quis congue. Praesent est enim, viverra commodo mauris et, pulvinar congue neque. Aliquam erat volutpat. Sed porta ex sapien, ut auctor metus consectetur eget. Nullam commodo turpis at neque ultrices, quis rhoncus libero sodales. Praesent aliquet mi sagittis ante aliquet, et posuere lacus commodo. Quisque blandit imperdiet luctus. "
@@ -1008,7 +1004,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non nunc nisl. Nam rhoncus justo vel ex eleifend lobortis. Vivamus eget pharetra risus. Morbi consequat risus sit amet libero condimentum molestie. Etiam nisl dolor, feugiat ut condimentum nec, porttitor sed sem. Nam efficitur aliquam libero quis congue. Praesent est enim, viverra commodo mauris et, pulvinar congue neque. Aliquam erat volutpat. Sed porta ex sapien, ut auctor metus consectetur eget. Nullam commodo turpis at neque ultrices, quis rhoncus libero sodales. Praesent aliquet mi sagittis ante aliquet, et posuere lacus commodo. Quisque blandit imperdiet luctus. "
@@ -1073,7 +1068,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non nunc nisl. Nam rhoncus justo vel ex eleifend lobortis. Vivamus eget pharetra risus. Morbi consequat risus sit amet libero condimentum molestie. Etiam nisl dolor, feugiat ut condimentum nec, porttitor sed sem. Nam efficitur aliquam libero quis congue. Praesent est enim, viverra commodo mauris et, pulvinar congue neque. Aliquam erat volutpat. Sed porta ex sapien, ut auctor metus consectetur eget. Nullam commodo turpis at neque ultrices, quis rhoncus libero sodales. Praesent aliquet mi sagittis ante aliquet, et posuere lacus commodo. Quisque blandit imperdiet luctus. "
@@ -1138,7 +1132,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non nunc nisl. Nam rhoncus justo vel ex eleifend lobortis. Vivamus eget pharetra risus. Morbi consequat risus sit amet libero condimentum molestie. Etiam nisl dolor, feugiat ut condimentum nec, porttitor sed sem. Nam efficitur aliquam libero quis congue. Praesent est enim, viverra commodo mauris et, pulvinar congue neque. Aliquam erat volutpat. Sed porta ex sapien, ut auctor metus consectetur eget. Nullam commodo turpis at neque ultrices, quis rhoncus libero sodales. Praesent aliquet mi sagittis ante aliquet, et posuere lacus commodo. Quisque blandit imperdiet luctus. "
@@ -1203,7 +1196,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non nunc nisl. Nam rhoncus justo vel ex eleifend lobortis. Vivamus eget pharetra risus. Morbi consequat risus sit amet libero condimentum molestie. Etiam nisl dolor, feugiat ut condimentum nec, porttitor sed sem. Nam efficitur aliquam libero quis congue. Praesent est enim, viverra commodo mauris et, pulvinar congue neque. Aliquam erat volutpat. Sed porta ex sapien, ut auctor metus consectetur eget. Nullam commodo turpis at neque ultrices, quis rhoncus libero sodales. Praesent aliquet mi sagittis ante aliquet, et posuere lacus commodo. Quisque blandit imperdiet luctus. "
@@ -1268,7 +1260,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non nunc nisl. Nam rhoncus justo vel ex eleifend lobortis. Vivamus eget pharetra risus. Morbi consequat risus sit amet libero condimentum molestie. Etiam nisl dolor, feugiat ut condimentum nec, porttitor sed sem. Nam efficitur aliquam libero quis congue. Praesent est enim, viverra commodo mauris et, pulvinar congue neque. Aliquam erat volutpat. Sed porta ex sapien, ut auctor metus consectetur eget. Nullam commodo turpis at neque ultrices, quis rhoncus libero sodales. Praesent aliquet mi sagittis ante aliquet, et posuere lacus commodo. Quisque blandit imperdiet luctus. "
@@ -1312,7 +1303,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:background="#CFCDCD"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="@+id/buttonFormulario"
         app:layout_constraintHorizontal_bias="1.0"
@@ -1321,7 +1312,6 @@
         app:layout_constraintVertical_bias="0.25">
 
         <ImageView
-            android:id="@+id/imagefecha1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -1331,13 +1321,11 @@
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/texthelp1"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.488"
             app:srcCompat="?attr/homeAsUpIndicator" />
 
         <TextView
-            android:id="@+id/texthelp2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -1387,7 +1375,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imagefecha1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
