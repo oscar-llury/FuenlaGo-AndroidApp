@@ -503,6 +503,10 @@ public class Noticias extends AppCompatActivity {
         });
 
         ayudaButton = findViewById(R.id.ayudaButton);
+
+        if(!com.example.fuenlago.ayuda.isShowAyuda()){
+            ayudaButton.setVisibility(View.GONE);
+        }
         ayudaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

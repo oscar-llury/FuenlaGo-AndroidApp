@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/Ajustes"
+        app:layout_constraintStart_toEndOf="@+id/Perfil"
         app:layout_constraintTop_toBottomOf="@+id/Ajustes"
         app:layout_constraintVertical_bias="0.0">
 
@@ -45,7 +45,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:background="#000000"
-            android:rotation="90"
+            android:rotation="45"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -173,7 +173,7 @@
             android:background="#000000"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
-            android:text="Ocultar Ayuda"
+            android:text=""
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

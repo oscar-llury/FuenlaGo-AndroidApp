@@ -29,7 +29,6 @@ public class Settings extends AppCompatActivity {
     private ConstraintLayout help4;
     private ConstraintLayout help5;
     private ConstraintLayout help6;
-    private ayuda ayuda;
     private Button ocultarAyuda;
 
     private Button restablecer;
@@ -45,8 +44,6 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-
-        ayuda = new ayuda();
 
         restablecer= findViewById(R.id.restablecer);
         daltonico= findViewById(R.id.switchDaltonico);
@@ -101,13 +98,20 @@ public class Settings extends AppCompatActivity {
         });
 
         ayudaButton = findViewById(R.id.ayudaButton);
-        if(!ayuda.isShowAyuda()){
+        if(!com.example.fuenlago.ayuda.isShowAyuda()){
             ayudaButton.setVisibility(View.GONE);
         }
+
+        if (com.example.fuenlago.ayuda.isShowAyuda()){
+            ocultarAyuda.setText("Ocultar ayuda");
+        } else {
+            ocultarAyuda.setText("Mostrar ayuda");
+        }
+
         ocultarAyuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ayuda.isShowAyuda()){
+                if(com.example.fuenlago.ayuda.isShowAyuda()){
                     ocultarAyuda.setText("Mostrar ayuda");
                     ayudaButton.setVisibility(View.GONE);
                     ayudaCheck = false;
@@ -117,11 +121,11 @@ public class Settings extends AppCompatActivity {
                     help4.setVisibility(View.GONE);
                     help5.setVisibility(View.GONE);
                     help6.setVisibility(View.GONE);
-                    ayuda.setShowAyuda(false);
+                    com.example.fuenlago.ayuda.setShowAyuda(false);
                 }else {
                     ocultarAyuda.setText("Ocultar ayuda");
                     ayudaButton.setVisibility(View.VISIBLE);
-                    ayuda.setShowAyuda(true);
+                    com.example.fuenlago.ayuda.setShowAyuda(true);
                 }
             }
         });
