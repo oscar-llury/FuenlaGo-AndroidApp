@@ -3,7 +3,7 @@ Aplicación desarrollada para Android como parte de la asignatura de Interacció
 
 # Instrucciones de instalación
 
-Para instalar la aplicación será necesario descargar el apk del siguiente enlace [link](https://github.com/oscar-llury/FuenlaGo-IPO2020/blob/master/app/release/app-release.apk)
+Para instalar la aplicación será necesario descargar el apk del siguiente enlace [link](app/release/FuenlaGo!!!.apk)
 
 Lo siguiente será en el dispositivo móvil, desactivar la opción de "Aplicaciones de origen desconocido".
 
